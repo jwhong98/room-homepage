@@ -1,0 +1,18 @@
+.heroNav {
+  background-color: black;
+  width: fit-content;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.heroNav img {
+  padding: 1rem 1.25rem;
+  /* width: 3.25rem; */
+}
+
+.heroNav img:hover {
+  background-color: hsl(0, 0%, 27%);
+}

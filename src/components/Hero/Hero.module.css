@@ -1,0 +1,6 @@
+.hero {
+  display: flex;
+  position: relative;
+  flex: 1;
+  line-height: 0;
+}

@@ -1,22 +1,23 @@
 import "./App.css";
+import About from "./components/About/About";
+import Body from "./components/Body/Body";
+import Hero from "./components/Hero/Hero";
+import Intro from "./components/Intro/Intro";
+import Navbar from "./components/Navbar/Navbar";
+import Static from "./components/Static/Static";
+import abtDark from "./images/image-about-dark.jpg";
+import abtLight from "./images/image-about-light.jpg";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Body>
+      <Navbar />
+      <Hero />
+      <Intro />
+      <Static img={abtDark} />
+      <About />
+      <Static img={abtLight} />
+    </Body>
   );
 }
 

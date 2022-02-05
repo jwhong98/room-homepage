@@ -23,8 +23,13 @@
   background: none;
   text-transform: uppercase;
   letter-spacing: 5px;
+  cursor: pointer;
 }
 
 .intro button img {
   margin-left: 2rem;
+}
+
+.intro button:hover {
+  opacity: 30%;
 }

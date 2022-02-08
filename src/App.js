@@ -9,9 +9,19 @@ import Static from "./components/Static/Static";
 import abtDark from "./images/image-about-dark.jpg";
 import abtLight from "./images/image-about-light.jpg";
 import { data } from "./components/Hero/data";
+import MobileMenu from "./components/MobileMenu/MobileMenu";
 
 function App() {
   const [id, setId] = useState(1);
+  const [menuShown, setMenuShown] = useState(false);
+
+  const showMenuHandler = () => {
+    setMenuShown(true);
+  };
+
+  const closeMenuHandler = () => {
+    setMenuShown(false);
+  };
   const displayContent = data.find((entry) => entry.id === id);
   const onPrev = () => {
     if (id === 1) {
@@ -29,10 +39,18 @@ function App() {
     }
   };
 
+  const imgSrc =
+    window.innerWidth >= 1440
+      ? displayContent.desktopImg
+      : displayContent.mobileImg;
+
+  console.log(window.innerWidth);
+
   return (
     <Body>
-      <Navbar />
-      <Hero onNext={onNext} onPrev={onPrev} img={displayContent.img} />
+      {menuShown && <MobileMenu onClose={closeMenuHandler} />}
+      <Navbar onShowMenu={showMenuHandler} />
+      <Hero onNext={onNext} onPrev={onPrev} img={imgSrc} />
       <Intro title={displayContent.title} content={displayContent.content} />
       <Static img={abtDark} />
       <About />

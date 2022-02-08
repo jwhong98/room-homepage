@@ -33,3 +33,16 @@
 .intro button:hover {
   opacity: 30%;
 }
+
+@media (min-width: 1440px) {
+  .intro {
+    flex: 1;
+    justify-content: center;
+    align-items: left;
+    padding: 0 6rem;
+  }
+
+  .intro h2 {
+    font-size: 2.25rem;
+  }
+}

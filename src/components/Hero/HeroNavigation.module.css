@@ -1,18 +1,38 @@
 .heroNav {
   background-color: black;
-  width: fit-content;
   display: flex;
+  width: 7rem;
+  height: 3.5rem;
   position: absolute;
   bottom: 0;
   right: 0;
   z-index: 10;
 }
 
-.heroNav img {
-  padding: 1rem 1.25rem;
-  /* width: 3.25rem; */
+.imgContainer {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
-.heroNav img:hover {
+.imgContainer:hover {
   background-color: hsl(0, 0%, 27%);
+}
+
+@media (min-width: 1440px) {
+  .heroNav {
+    right: -10rem;
+    width: 10rem;
+    justify-content: center;
+    height: 5rem;
+  }
+
+  .imgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 }

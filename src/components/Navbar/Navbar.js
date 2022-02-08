@@ -3,10 +3,15 @@ import classes from "./Navbar.module.css";
 import logo from "../../images/logo.svg";
 import toggleMenu from "../../images/icon-hamburger.svg";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <nav className={classes.nav}>
-      <img className={classes.toggle} src={toggleMenu} alt="menu toggle" />
+      <img
+        className={classes.toggle}
+        src={toggleMenu}
+        alt="menu toggle"
+        onClick={props.onShowMenu}
+      />
       <img className={classes.logo} src={logo} alt="logo" />
       <ul className={classes.menu}>
         <li>home</li>

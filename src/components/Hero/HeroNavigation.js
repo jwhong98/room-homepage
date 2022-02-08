@@ -6,8 +6,12 @@ import right from "../../images/icon-angle-right.svg";
 const HeroNavigation = (props) => {
   return (
     <div className={classes.heroNav}>
-      <img src={left} onClick={props.onPrev} alt="left arrow" />
-      <img src={right} onClick={props.onNext} alt="right arrow" />
+      <div className={classes.imgContainer}>
+        <img src={left} onClick={props.onPrev} alt="left arrow" />
+      </div>
+      <div className={classes.imgContainer}>
+        <img src={right} onClick={props.onNext} alt="right arrow" />
+      </div>
     </div>
   );
 };

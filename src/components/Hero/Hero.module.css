@@ -4,3 +4,12 @@
   flex: 1;
   line-height: 0;
 }
+
+@media (min-width: 1440px) {
+  .hero {
+    flex: 1;
+  }
+  .hero img {
+    width: auto;
+  }
+}

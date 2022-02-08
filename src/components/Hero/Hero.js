@@ -1,13 +1,12 @@
 import React from "react";
 import classes from "./Hero.module.css";
-import heroImg from "../../images/mobile-image-hero-1.jpg";
 import HeroNavigation from "./HeroNavigation";
 
-const Hero = () => {
+const Hero = (props) => {
   return (
     <section className={classes.hero}>
-      <img src={heroImg} alt="furniture" />
-      <HeroNavigation />
+      <img src={props.img} alt="furniture" />
+      <HeroNavigation onNext={props.onNext} onPrev={props.onPrev} />
     </section>
   );
 };
